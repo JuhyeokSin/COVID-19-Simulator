@@ -93,3 +93,5 @@ r=30, c=30, p=0.01, n_individuals=500, comply=True | r=30, c=30, p=0.50, n_indiv
 <img src="./images/G900_1percent_N500_Comply.gif"> | <img src="./images/G900_50percent_N500_NotComply.gif">
 <img src="./images/G900_1percent_N500_Comply.png"> | <img src="./images/G900_50percent_N500_NotComply.png">
 
+Figure 1. Show the importance of the vaccination
+<img src="./images/vaccination_importance.png">
