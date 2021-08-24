@@ -122,6 +122,7 @@ Figure 1. Show the importance of the vaccination
     - Clustering analysis can be considered in this case
 
 Figure 2. virus circle & quadrants
+             virus circle             |               quadrants
 :------------------------------------:|:----------------------------------:
 <img src="./images/virus_circle.png"> | <img src="./images/quadrants.png">
  
