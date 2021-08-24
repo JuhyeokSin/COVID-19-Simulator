@@ -80,15 +80,16 @@ grid = Grid(r=30, c=30, p=0.01, n_individuals=500, comply=True)
 
 ## Scatter plot with moving dots for different configurations
 
+Table 1. Comparison between comply vs. not comply
 r=30, c=30, p=0.01, n_individuals=500, comply=True | r=30, c=30, p=0.01, n_individuals=500, comply=False
 :-------------------------------------------------:|:---------------------------------------------------:
 <img src="./images/G900_1percent_N500_Comply.gif"> | <img src="./images/G900_1percent_N500_NotComply.gif">
 <img src="./images/G900_1percent_N500_Comply.png"> | <img src="./images/G900_1percent_N500_NotComply.png">
-  Table 1. Comparison between comply vs. not comply
 
 
+Table 2. Show the importance of the quarantine policy
 r=30, c=30, p=0.01, n_individuals=500, comply=True | r=30, c=30, p=0.50, n_individuals=500, comply=False
 :-------------------------------------------------:|:---------------------------------------------------:
 <img src="./images/G900_1percent_N500_Comply.gif"> | <img src="./images/G900_50percent_N500_NotComply.gif">
 <img src="./images/G900_1percent_N500_Comply.png"> | <img src="./images/G900_50percent_N500_NotComply.png">
-  Table 2. Show the importance of the quarantine policy
+
