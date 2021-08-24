@@ -61,5 +61,6 @@ class Grid:
 - individuals move (+/-) 2 points
 - additional parameter for infection to happen between individuals
 ```
-individual_loc: locations of the individuals. If a not-infected individual shares the same location with the infected, it is considered as they are contacted. This might lead to a new infection
+individual_loc: locations of the individuals. If a not-infected individual shares the same location with the infected, 
+it is considered as they are contacted. This might lead to a new infection
 ```
