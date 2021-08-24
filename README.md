@@ -1,5 +1,5 @@
 # COVID-19-Simulator
-*Inspired by [BML Traffic Modeling](https://github.com/kdelrosso/traffic-flow-sim)*
+*Inspired by [kdelrosso / traffic-flow-sim](https://github.com/kdelrosso/traffic-flow-sim)*
 
 
 ## Objective
