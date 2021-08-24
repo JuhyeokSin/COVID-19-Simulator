@@ -79,7 +79,7 @@ grid = Grid(r=30, c=30, p=0.01, n_individuals=500, comply=True)
 
 
 ## Scatter plot with moving dots for different configurations
-```
-grid = Grid(r=30, c=30, p=0.01, n_individuals=500, comply=True)
-```
-<img src="./images/G900_1percent_N500_Comply.gif">
+
+r=30, c=30, p=0.01, n_individuals=500, comply=True | r=30, c=30, p=0.01, n_individuals=500, comply=False
+:-------------------------------------------------:|:---------------------------------------------------:
+<img src="./images/G900_1percent_N500_Comply.gif"> | <img src="./images/G900_1percent_N500_NotComply.gif.gif">
