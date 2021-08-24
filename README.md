@@ -76,3 +76,10 @@ grid = Grid(r=30, c=30, p=0.01, n_individuals=500, comply=True)
   - Time series data
   - Scatter plot with moving dots (.gif file)
   - Time series graph
+
+
+## Scatter plot with moving dots for different configurations
+```
+grid = Grid(r=30, c=30, p=0.01, n_individuals=500, comply=True)
+```
+<img src="./images/G900_1percent_N500_Comply.gif">
