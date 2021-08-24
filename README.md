@@ -71,3 +71,8 @@ Example:
 # num_vaccinated: 5, num_not_vaccinated: 480, num_infected: 15
 grid = Grid(r=30, c=30, p=0.01, n_individuals=500, comply=True)
 ```
+- This will provide the followings:
+  - Summary data
+  - Time series data
+  - Scatter plot with moving dots (.gif file)
+  - Time series graph
