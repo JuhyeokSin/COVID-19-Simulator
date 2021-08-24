@@ -13,7 +13,7 @@ The purpose of the data analysis for the COVID-19 simulation data is to find the
 3. Conclusion
 4. Possible Future Works
 
-## Understanding the classes: Individual and Grid
+## 1. Understanding the classes: Individual and Grid
 ```
 class Individual:
     def __init__(self, individual_id, vaccinated, x_A, y_A, x_B, y_B, color='green', infected=False):
@@ -78,7 +78,8 @@ grid = Grid(r=30, c=30, p=0.01, n_individuals=500, comply=True)
   - Time series graph
 
 
-## Scatter plot with moving dots for different configurations
+## 2. Visualization
+### Scatter plot with moving dots for different configurations
 
 Table 1. Comparison between comply vs. not comply
 r=30, c=30, p=0.01, n_individuals=500, comply=True | r=30, c=30, p=0.01, n_individuals=500, comply=False
