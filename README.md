@@ -1,10 +1,12 @@
 # COVID-19-Simulator
 *Inspired by [BML Traffic Modeling](https://github.com/kdelrosso/traffic-flow-sim)*
 
+
 ## Objective
 The purpose of the data analysis for the COVID-19 simulation data is to find the answer for the following questions:
 - Is vaccination important?
 - Is self-quanrantine for the infected important?
+
 
 ## How to develop the simulator and conduct data analysis
 1. Two Python classes: Individual & Grid (N x N grid is used to describe an environment where individuals are moving around)
@@ -12,6 +14,7 @@ The purpose of the data analysis for the COVID-19 simulation data is to find the
   - Scatter plot with moving dots & time series data
 3. Conclusion
 4. Possible Future Works
+
 
 ## 1. Understanding the classes: Individual and Grid
 ```
@@ -78,6 +81,7 @@ grid = Grid(r=30, c=30, p=0.01, n_individuals=500, comply=True)
   - Time series graph
 
 
+
 ## 2. Visualization
 
 Table 1. Comparison between comply vs. not comply
@@ -99,10 +103,12 @@ Figure 1. Show the importance of the vaccination
 - The higher vaccination rate, the less number of individuals who have been infected at least once
 
 
+
 ## 3. Conclusions
 - There are two cases: comply vs. not-comply with the self quanrantine policy
   - Complying with the policy is as important as the vaccination rate
 - The higher vaccination rate, the less number of individuals who have been infected at least once
+
 
 
 ## 4. Possible Future Works
@@ -126,8 +132,6 @@ Figure 2. virus circle & quadrants
 :------------------------------------:|:----------------------------------:
 <img src="./images/virus_circle.png"> | <img src="./images/quadrants.png">
  
-
-Figure
 
 ### New Variable
 1. virus_variant
