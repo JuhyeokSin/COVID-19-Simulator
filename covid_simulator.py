@@ -200,14 +200,6 @@ class Individual:
                 self.infected = False
     
     
-    # def mortality(self):
-    #     lower = 0
-    #     upper = 1
-    #     mu = 0.02128751517314642 # COVID-19 mortality rate world wide as of 08.02.2021
-    #     sigma = 0.1
-    #     return truncnorm.rvs((lower-mu)/sigma,(upper-mu)/sigma,loc=mu,scale=sigma)
-    
-    
     def get_recovered_or_dead(self):
         """
         Assume that it takes 14 days (= 14 seconds) an individual gets recovered from the COVID-19
@@ -243,28 +235,24 @@ class Individual:
 
 
 class Grid:
-    """
-    Represents the rectangular lattice where individuals move and
-    their health condition (red, green, orange) with COVID-19 virus
-    
-    Parameters
-    ----------
-    r / c: int, the grid size r x c
-    n_vaccinated / n_not_vaccinated: int, number of vaccinated and non-vaccinated individual
-    p: float in the interval (0, 1), probability of vaccinated individuals
-    n_individuals: int, number of individuals
-    comply: bool, indicates if individuals comply with the quanrantine policy when infected
-    Notes
-    -----
-    input either
-    n_vaccinated & n_not_vaccinated & n_infected OR
-    p and n_individuals
-
-    infected should be not vaccinated for the initial state
-    """
-
     def __init__(self, r=100, c=100, n_vaccinated=None, n_not_vaccinated=None, p=None, n_individuals=None, n_infected=None, comply=True):
-        
+        """
+        @param r: int, the grid size for row
+        @param c: int, the grid size for column
+        @param n_vaccinated: int, the number of vaccinated individuals
+        @param n_not_vaccinated: int, the number of non-vaccinated individuals
+        @param p: float, with in the interval of (0, 1), probability of vaccinated individuals
+        @param n_individuals: int, number of individuals
+        @param comply: bool, indicates if individuals comply with the quarantine policy when infected
+
+        *Notes:
+        -------
+        input either
+        n_vaccinated & n_not_vaccinated & n_infected OR
+        p and n_individuals
+
+        infected should be not_vaccinated for the initial setup
+        """
         self.comply = comply
         self.n_vaccinated = n_vaccinated
         self.n_not_vaccinated = n_not_vaccinated
@@ -280,7 +268,6 @@ class Grid:
         infection_rate = 0.03
         # update if p and n_individuals are specified
         if p: # We assume that n_individual is not None
-#            self.n_vaccinated = np.random.binomial(n_individuals, p)
             self.n_vaccinated = int(n_individuals * p) #40
             self.n_infected = int(n_individuals* infection_rate)
             self.n_not_vaccinated = n_individuals - self.n_vaccinated - self.n_infected
@@ -380,8 +367,6 @@ class Grid:
                         individual.become_infected()
 
 
-
-
     def run_simulation(self, n=1000, directory='./images', plot_freq=0.1, update_freq=0.05):
         """Run n steps of the COVID simulation.
         Parameters
@@ -422,6 +407,7 @@ class Grid:
         time_series_df.to_csv('./images/time_series_data.csv')
         self.summary()
 
+        
     def _fix_file_num(self, n, digits):
         """Return n padded with leading '0's so total length is digits."""
 
@@ -432,11 +418,9 @@ class Grid:
 
     def plot(self, directory='./images', file_num=None, digits=5):
         """Plot the current location of cars in the simulation.
-        Parameters
-        ----------
-        directory: string, directory to save simulation plots
-        file_num: int, suffix to append to filename 'simulation_step_{file_num}'
-        digits: int, how many digits to use while padding file_num with zeros
+        @param directory: string, directory to save simulation plots
+        @param file_num: int, suffix to append to filename 'simulation_step_{file_num}'
+        @param digits: int, how many digits to use while padding file_num with zeros
         """
 
         # create DataFrame with x, y, and color columns for all cars
@@ -444,7 +428,6 @@ class Grid:
         for (x, y), individuals in self.individual_loc.items():
             for individual in individuals:
                 coord_col.append( (x, y, individual.color) )
-#        coord_col = [( x, y, v[0].color) for (x, y), v in self.individual_loc.items()]
         coord_col = pd.DataFrame(coord_col, columns=['x', 'y', 'color'])
 
         # create scatter plot by car color
@@ -470,6 +453,7 @@ class Grid:
         plt.savefig(filename)
         plt.close()
 
+        
     def summary(self):
         """Print summary statistics from the simulation."""
         individuals_list = self.individual_loc.values()
