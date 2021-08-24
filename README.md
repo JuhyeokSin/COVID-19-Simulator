@@ -79,7 +79,6 @@ grid = Grid(r=30, c=30, p=0.01, n_individuals=500, comply=True)
 
 
 ## 2. Visualization
-### Scatter plot with moving dots for different configurations
 
 Table 1. Comparison between comply vs. not comply
 r=30, c=30, p=0.01, n_individuals=500, comply=True | r=30, c=30, p=0.01, n_individuals=500, comply=False
@@ -97,3 +96,41 @@ r=30, c=30, p=0.01, n_individuals=500, comply=True | r=30, c=30, p=0.50, n_indiv
 
 Figure 1. Show the importance of the vaccination
 <img src="./images/vaccination_importance.png"> 
+- The higher vaccination rate, the less number of individuals who have been infected at least once
+
+
+## 3. Conclusions
+- There are two cases: comply vs. not-comply with the self quanrantine policy
+  - Complying with the policy is as important as the vaccination rate
+- The higher vaccination rate, the less number of individuals who have been infected at least once
+
+
+## 4. Possible Future Works
+### Change variable values
+1. p_protection
+  - This can be extended to different vaccines (Moderna, Pfizer, J&J, etc.) Then p_protection can vary
+2. Virus Circles
+  - Now, the simulation model is simplified since the infection only happens from the initially infected individuals
+  - In the grid, we can create a virus circle. When an individual is on a point of the circle, the infection happens
+  - Different virus circles can be used for different variants (see **New Variable** below)
+3. Vaccination
+  - Now, vaccinations only happen in the beginning by having some vaccinated individuals
+  - It can become dynamic that individuals can be vaccinated in the middle of the simulation
+4. The grid can be divided into some fields
+  - e.g. 4 quadrants
+    - Each quadrants has different population density
+    - Clustering analysis can be considered in this case
+
+Figure 2. virus circle & quadrants
+:------------------------------------:|:----------------------------------:
+<img src="./images/virus_circle.png"> | <img src="./images/quadrants.png">
+ 
+
+Figure
+
+### New Variable
+1. virus_variant
+  - When there emerges new virus variants, we can re-adjust the values for the following parameters:
+    - p_infected
+    - p_protection
+    - mortality
