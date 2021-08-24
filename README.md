@@ -64,3 +64,10 @@ class Grid:
 individual_loc: locations of the individuals. If a not-infected individual shares the same location with the infected, 
 it is considered as they are contacted. This might lead to a new infection
 ```
+
+## How to generate the data
+Example:
+```
+# num_vaccinated: 5, num_not_vaccinated: 480, num_infected: 15
+grid = Grid(r=30, c=30, p=0.01, n_individuals=500, comply=True)
+```
